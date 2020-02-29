@@ -1,3 +1,4 @@
+require "pry"
 class Pokemon
   attr_accessor :id, :name, :type, :db
 
@@ -7,11 +8,13 @@ class Pokemon
 
   def self.save(pk_name, pk_type, @db)
     sql = <<-SQL
-      INSERT INTO pokemons (pk_name, pk_type)
-      VALUES (?, ?)
+    SELECT * FROM pokemon WHERE pk_name = ?
+    -- # sql = <<-SQL
+    -- #   INSERT INTO pokemons (pk_name, pk_type)
+    -- #   VALUES (?, ?)
     SQL
+    binding.pry
   DB[:conn].execute(sql, self.pk_name, self.pk_type)
-  "SELECT * FROM pokemon WHERE name = ?
 
   end
 
