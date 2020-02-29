@@ -9,7 +9,7 @@ class Pokemon
 
   def self.save(pk_name, pk_type, db)
     sql = <<-SQL
-    INSERT INTO pokemons (name, type)
+    INSERT INTO pokemon (name, type)
     VALUES (?, ?)
     SQL
     # binding.pry
