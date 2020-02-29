@@ -13,7 +13,7 @@ class Pokemon
     WHERE pk_name = ?
     SQL
     # binding.pry
-  DB[:conn].execute(sql, self.pk_name, self.pk_type)
+  db.execute(sql, self.pk_name, self.pk_type)
 
   end
 
