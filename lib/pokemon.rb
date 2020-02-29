@@ -9,8 +9,8 @@ class Pokemon
 
   def self.save(pk_name, pk_type, db)
     sql = <<-SQL
-    FROM pokemons
-    WHERE name = ?
+    INSERT INTO pokemons
+    WHERE name, type
     SQL
     # binding.pry
   db.execute(sql, pk_name, pk_type)
