@@ -1,5 +1,5 @@
 require "pry"
-require_relative "..db/pokemon.db"
+require_relative ".db/pokemon.db"
 class Pokemon
   attr_accessor :id, :name, :type, :db
 
