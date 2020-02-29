@@ -10,11 +10,9 @@ class Pokemon
   def self.save(pk_name, pk_type, db)
     sql = <<-SQL
     SELECT * FROM pokemons
-    WHERE pk_name = ?
-    SQL
+    WHERE name = ?    SQL
     # binding.pry
-  db.execute(sql, self.pk_name, self.pk_type)
-
+  db.execute(sql, pk_name, pk_type)
   end
 
 
