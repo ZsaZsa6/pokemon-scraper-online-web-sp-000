@@ -1,5 +1,5 @@
 require "pry"
-require_relative ".db/pokemon.db"
+
 class Pokemon
   attr_accessor :id, :name, :type, :db
 
@@ -9,7 +9,7 @@ class Pokemon
 
   def self.save(pk_name, pk_type, db)
     sql = <<-SQL
-    SELECT * FROM pokemon
+    SELECT * FROM db
     WHERE pk_name = ?
     SQL
     # binding.pry
