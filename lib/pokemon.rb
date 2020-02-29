@@ -6,7 +6,7 @@ class Pokemon
 
   end
 
-  def self.save(pk_name, pk_type, @db)
+  def self.save(pk_name, pk_type, db)
     sql = <<-SQL
     SELECT * FROM pokemon WHERE pk_name = ?
     -- # sql = <<-SQL
